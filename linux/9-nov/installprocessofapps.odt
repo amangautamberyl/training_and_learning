@@ -1,0 +1,75 @@
+﻿Install Ruby without RVM(Optional if RVM not needed to be installed)
+wget http://ftp.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz
+tar -xzvf ruby-2.1.2.tar.gz
+cd ruby-2.1.2/
+sudo apt-get install gcc  make
+./configure
+make
+sudo make install
+ruby -v
+Install Curl
+sudo apt-get install curl
+
+Install RVM
+curl -L get.rvm.io | bash -s stable
+The beautiful part of this is that it installs RVM to our home directory, providing us with a sandboxed RVM installation that no other user on the system can touch. This will also add a line to ~/.bashrc:
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+And a couple of lines to ~/.bash_profile:
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+Then we'll need to source the ~/.rvm/scripts/rvm file which we can do with this small command:
+source ~/.rvm/scripts/rvm
+rvm requirements
+
+Install Ruby
+rvm install 2.1
+rvm use 2.1 --default
+ruby -v
+gem install rails
+Install Imagemagick
+sudo apt-get install imagemagick libmagickwand-dev
+Install MySQL
+sudo apt-get install mysql-client mysql-server libmysql-ruby libmysqlclient-dev
+or
+sudo apt-get install libmysqlclient-dev
+
+Install Git
+
+sudo apt-get install git
+
+Setting Up Project
+
+git clone https://ratnamyadav@bitbucket.org/ratnamyadav/thepopmag.git
+
+and to switch
+
+git fetch && git checkout [branch name]
+
+
+Installing and setting nginx
+sudo apt-get install nginx
+
+Installing Sublime
+For Sublime-Text-2:
+sudo add-apt-repository ppa:webupd8team/sublime-text-2 
+sudo apt-get update 
+sudo apt-get install sublime-text
+For Sublime-Text-3:
+sudo add-apt-repository ppa:webupd8team/sublime-text-3 
+sudo apt-get update 
+sudo apt-get install sublime-text
+
+Installing Skype
+sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+Then install Skype via the Software-Center or via the Terminal.
+sudo apt-get update && sudo apt-get install skype
+For Installing gem Nokogiri
+
+sudo apt-get install libxslt-dev libxml2-dev
+For Installing gem ffmpeg
+sudo add-apt-repository ppa:jon-severinsson/ffmpeg
+sudo apt-get update
+sudo apt-get install ffmpeg
+
