@@ -1,0 +1,18 @@
+<!DOCTYPE Html>
+<html>
+	<head>
+		<title>
+			Aman World
+		</title>
+	</head>
+	<body bgcolor="sky blue">
+		<center>
+			<b>
+				<marquee><h1>Welcome to Aman World</h1></marquee>
+			</b>
+			<img src="/home/beryl/Desktop/training_and_learning/html/17-nov/mobile_shop.jpg" alt="mobileshop" height="300" width="1000">
+			<br><br><br>
+			@coyright reserved. <a href= "http://www.berylsystems.com">Click Me</a>
+		</center>
+	</body>
+</html>

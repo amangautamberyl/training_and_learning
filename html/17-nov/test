@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>
+			Test
+		</title>
+	</head>
+	<body>
+		markedexample: My name is <mark>Aman Gautam </mark>
+		<br>
+		strongexample: My name is <strong> Aman Gautam </strong>
+		<br>
+		abbrevationexample: My name is <abbr title="Aman Gautam">Aman</abbr> 
+		<br>
+		acronymexample: My name is <	
+		
+		<br>
+	</body>
+</html>
