@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>
+			DOM by tag name
+		</title>
+		<script>
+			function a(element)
+			{
+				var x = document.getElementsByTagName("LI");
+    			document.getElementById("aman").value = x[0].innerHTML;
+			}
+		</script>
+	</head>
+	<body>
+		<p>Graduate Engineer Trainee
+		<ul>
+			<li>Aman</li>
+			<li>Anand</li>
+			<li>Aryan</li>
+		</ul>
+		
+		<h3>Click on the below button to display use of DOM By tag name</h3>
+		<button onclick="a()">Click Me</button><br>
+		<br>My name is: &nbsp;&nbsp;&nbsp;<input type=text id="aman"></input>
+	</body>
+</html>
