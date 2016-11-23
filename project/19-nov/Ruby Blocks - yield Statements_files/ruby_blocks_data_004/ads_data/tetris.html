@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="wf-raleway-n4-active wf-active" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>Tetris Layout</title>
+  <meta data-template-name="CustomLightbox_Layout">
+  <!-- Required for studio to fetch the lightbox standard json schema during ad creation.
+       Note: A specific GWD version is expected by studio but has no effect on tetris behavior. -->
+  <meta name="generator" content="Google Web Designer 1.4.2.0915">
+  <link rel="stylesheet" href="tetris_data/tetris.css">
+  <link rel="stylesheet" href="tetris_data/tetris_layout.css">
+  <script async="" src="tetris_data/www-widgetapi.js" id="www-widgetapi-script" type="text/javascript"></script><script src="tetris_data/tetris_gdn_adapter.js"></script>
+  <script src="tetris_data/addata_util.js"></script>
+  <script src="tetris_data/Enabler_01_141.js"></script>
+  <script src="tetris_data/CustomElements.js"></script>
+  <script src="tetris_data/tetris.js"></script>
+  <script src="tetris_data/tetris_layout.js"></script>
+  <script>
+    // TODO(rneale): b/24775203
+    Enabler.exit = Enabler.exitOverride;
+
+    window.disableEventBubbling = true;
+    function GdnLayout() {}
+    GdnLayout.getConfig =
+        studioinnovation.layouts.lightbox.tetris.gdnAdapter.
+        translateFromEnablerParams;
+
+    function GdnPreview() {}
+    GdnPreview.getConfig =
+        studioinnovation.layouts.lightbox.tetris.gdnAdapter.
+        translateFromDataObject;
+
+    var modulesLoadedHandler = function() {
+      new studioinnovation.layouts.lightbox.tetris.Tetris();
+    };
+
+    // Note: Must use explicit module names for Studio's static analysis during ad creation.
+    Enabler.loadModules([studio.module.ModuleId.CONFIGURABLE, studio.module.ModuleId.GDN],
+                        modulesLoadedHandler);
+
+    // Required for compatibility with the studio creation workflow.
+    Enabler.setHint('expansionMode', 'lightbox');
+  </script>
+  <script>
+    // This function is only used for Studio static parsing. It's used to support DBM custom video
+    // events.
+    function DBMReporting() {
+      studio.video.Reporter.attach("video_0", dummyVideoElem, true);
+      studio.video.Reporter.attach("video_1", dummyVideoElem, true);
+      studio.video.Reporter.attach("video_2", dummyVideoElem, true);
+      studio.video.Reporter.attach("video_3", dummyVideoElem, true);
+      studio.video.Reporter.attach("video_4", dummyVideoElem, true);
+      studio.video.Reporter.attach("video_5", dummyVideoElem, true);
+      studio.video.Reporter.attach("video_6", dummyVideoElem, true);
+      studio.video.Reporter.attach("video_7", dummyVideoElem, true);
+      studio.video.Reporter.attach("video_8", dummyVideoElem, true);
+    }
+  </script>
+  <!-- Required for studio to fetch the lightbox standard json schema during ad creation -->
+  <script src="tetris_data/prod_studio_01_141_configurablemodule.js" charset="UTF-8" type="text/javascript"></script><script src="tetris_data/prod_studio_01_141_gdnmodule.js" charset="UTF-8" type="text/javascript"></script><script src="tetris_data/webfont.js" charset="UTF-8" type="text/javascript"></script><link href="tetris_data/css.css" rel="stylesheet"><script src="tetris_data/iframe_api.js" charset="UTF-8" type="text/javascript"></script><style class="themer-font">.font-themed {
+  font-family: 'Raleway', 'HelveticaNeue-Light', 'HelveticaNeue', 'Roboto', 'Open Sans', 'Arial', sans-serif !important;
+}</style></head><body class="dark desktop firefox linux web"><div id="invitation" class="view-container"><div id="cta" class="view-container"><div class="invitation-presenter tall single-thumb"><div style="background-image: linear-gradient(to bottom, rgb(0, 0, 0) 30%, rgb(0, 0, 0) 100%);" class="generated-background"></div><div class="caption-background"></div><div style="background-image: url(&quot;https://tpc.googlesyndication.com/simgad/8561570533973531518&quot;);" class="logo"></div><div class="overlay"></div><div style="background: rgb(204, 0, 0) none repeat scroll 0% 0%;" class="accent"></div><div style="background-color: rgb(204, 0, 0);" class="expand-icon"></div><div class="custom-invite"><div class="foreground"></div><div class="custom-background"><canvas class="image-blurrer"></canvas></div></div><div style="line-height: 78px;" class="caption font-themed active primary"><div style="font-size: 17px;">Dear Zindagi - A film starring Alia Bhatt, Shah Rukh Khan &amp; Directed by Gauri Shinde. Releasing Nov 25th</div></div><tetris-video-thumb class="thumb youtube active primary"><div class="icon"></div><div style="background-image: url(&quot;https://img.youtube.com/vi/5DkO7ksXY8E/maxresdefault.jpg&quot;);" class="image"><canvas height="347" width="298" class="image-blurrer"></canvas></div><iframe id="widget2" src="tetris_data/5DkO7ksXY8E.html" title="YouTube video player" allowfullscreen="1" style="width: 298px; height: 168px;" class="player" width="298" frameborder="0" height="347"></iframe></tetris-video-thumb></div></div><div id="undefined" class="view-container"></div></div><div id="expanded" class="view-container" style="width: 100%; height: 100%; left: -9999px;"><div style="background-color: rgb(0, 0, 0);" class="filmstrip-presenter portrait"><header class="custom-header"></header><header style="background-image: linear-gradient(to bottom, rgb(0, 0, 0) 30%, rgb(0, 0, 0) 100%);" class="generated-header"><div><div class="social-container"><div class="social-overlay-container"><div class="social-overlay"><div class="social-header"><div>&#8206;&#8207;&#8206;&#8206;&#8206;&#8206;&#8206;&#8207;&#8206;&#8207;&#8207;&#8207;&#8206;&#8206;&#8206;&#8207;&#8206;&#8206;&#8207;&#8207;&#8206;&#8207;&#8206;&#8206;&#8207;&#8206;&#8207;&#8207;&#8207;&#8207;&#8207;&#8207;&#8207;&#8207;&#8207;&#8207;&#8206;&#8207;&#8206;&#8207;&#8206;&#8206;&#8207;&#8206;&#8207;&#8207;&#8206;&#8206;&#8207;&#8206;&#8207;&#8207;&#8206;&#8207;&#8206;&#8206;&#8207;&#8207;&#8207;&#8207;&#8207;&#8206;&#8206;&#8207;&#8206;&#8207;&#8207;&#8207;&#8206;&#8207;&#8207;&#8206;&#8207;&#8206;&#8206;&#8207;&#8206;&#8206;&#8207;&#8206;&#8206;&#8206;&#8207;&#8206;&#8206;&#8206;&#8207;&#8207;&#8206;&#8206;&#8206;&#8207;&#8207;&#8207;&#8207;&#8206;Connect With Us&#8206;&#8207;&#8206;&#8206;&#8207;&#8206;</div></div></div></div><div class="social-button"></div></div></div><div><div class="rotator narrow"><div class="logo shown"><img src="tetris_data/8561570533973531518.png"></div><div class="text-cta-container"><div class="text-cta-rotator"><div style="right: 160px; line-height: 34px;" class="message text"><div style="font-size: 11px;" class="font-themed">Dear Zindagi - A film starring Alia Bhatt, Shah Rukh Khan &amp; Directed by Gauri Shinde. Releasing Nov 25th</div></div><div style="width: 140px;" class="message cta"><button class="font-themed">Coming Soon</button></div></div></div></div></div></header><div class="content"><div style="bottom: 67px;" class="card-container one-card-and-thumbs"><tetris-video-card class="card primary"></tetris-video-card><tetris-video-card class="card secondary"></tetris-video-card><tetris-video-card class="card"></tetris-video-card><tetris-video-card class="card"></tetris-video-card></div><div style="background-image: linear-gradient(to top, rgb(0, 0, 0) 30%, rgb(0, 0, 0) 100%); height: 67px;" class="thumb-scroller shown"><div class="top-arrow hidden"><div></div></div><div class="left-arrow hidden"><div></div></div><div class="thumb-container"><tetris-video-thumb style="width: 85px; height: 57px;" class="thumb selected"><div class="icon"></div></tetris-video-thumb><tetris-video-thumb style="width: 85px; height: 57px;" class="thumb"><div class="icon"></div></tetris-video-thumb><tetris-video-thumb style="width: 85px; height: 57px;" class="thumb"><div class="icon"></div></tetris-video-thumb><tetris-video-thumb style="width: 85px; height: 57px;" class="thumb"><div class="icon"></div></tetris-video-thumb></div><div class="right-arrow"><div></div></div><div class="bottom-arrow hidden"><div></div></div></div></div></div></div></body></html>
