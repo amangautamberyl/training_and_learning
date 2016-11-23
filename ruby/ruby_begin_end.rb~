@@ -1,0 +1,10 @@
+END {
+	puts "BYE"
+}
+END {
+	puts "HI"
+}
+BEGIN {
+	puts "Hellozzz"
+}
+puts "main content"
