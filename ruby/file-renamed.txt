@@ -1,0 +1,6 @@
+Hi this is the file i have created with ruby and this is the first line of the file
+This is the second line i am writing using file open in append mode
+Hi this is the third line i have created using file open in append mode
+
+Regards, 
+ Aman Gautam 
