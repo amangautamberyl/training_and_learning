@@ -1,4 +1,7 @@
+# require_relative 'ruby_hashing.rb' 
+
 class Datetime
+
   def datetime
     time1 = Time.new
     puts "Current time using time.new function is: #{time1}"
@@ -14,8 +17,13 @@ class Datetime
 	puts "Current second is :  #{time2.sec.inspect}"
 	puts "Current microsecond is :  #{time2.usec.inspect}"
 	puts "Current zone is :  #{time2.zone.inspect}"
+	time3=("#{time2.hour.inspect"})
+	puts "time after 3 hours is: #{time3}"
   end
 end
 
 ob=Datetime.new
 ob.datetime
+#ob.hashexample()
+# ob1=Hashing.new
+# ob1.basic()

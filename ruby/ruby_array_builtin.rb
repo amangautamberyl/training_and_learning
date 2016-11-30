@@ -7,12 +7,14 @@ module Array_def
     ARRAY6 = ['1', 'Aman']
     ARRAY7 = []
     ARRAY8 = ['1', '2', 'Aman', '*', '@']
+    ARRAY9 = [['1', '2'], '2', 'Aman', '*', '@']
+    ARRAY10 = ['1', '2', 'Aman', nil, '@', nil]
 end
 
 class ArrayExample
   include Array_def
 
-=begin
+
   def simple_array
 	  @str = Array.new(10) { |i| i = i*2 }
 	  puts "#{@str}"
@@ -52,11 +54,11 @@ class ArrayExample
   end	
 
   def array_extraction				#not working
-    puts"#{ARRAY5.abbrev(['Nam'])}"
+    puts ARRAY2.abbrev(pattern = '[/[a-z]/]')
   end
 
   def array_association			#not working
-    puts "#{ARRAY5.assoc('id')}"
+    puts "#{ARRAY5.assoc(['1'])}"
   end
 
 
@@ -99,9 +101,13 @@ class ArrayExample
   def array_push				#insert element in the array 
   	puts "#{ARRAY8.push('&')}"
   end
-=end
+
   def array_reverse				#reverse the elements of the array
     puts "#{ARRAY2.reverse}" 
+  end
+
+  def array_compact
+    puts "#{ARRAY10.compact}"
   end 
 end
 
@@ -123,4 +129,5 @@ ob=ArrayExample.new
 #ob.array_sort
 #ob.array_pop
 #ob.array_push
-ob.array_reverse
+#ob.array_reverse
+ob.array_compact

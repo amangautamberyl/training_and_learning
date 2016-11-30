@@ -61,8 +61,13 @@ class Filemethods
 
   def foreach
 
-  	IO.foreach("/home/beryl/Desktop/training_and_learning/ruby/file-renamed.txt") {|block| puts block}
+  	IO.foreach("/home/beryl/Desktop/training_and_learning/ruby/file-renamed.txt") do {|block| puts block}
   end
+
+  # def filesize
+
+  # end
+
 end
 
 ob=Filemethods.new

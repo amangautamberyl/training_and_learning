@@ -1,3 +1,4 @@
+require Hash_def
 class Prime
 
   def prime()
@@ -15,7 +16,14 @@ class Prime
      	puts "the entered number is not prime"
      end
   end
+   
+   
+
+
 end
 
+
+
 ob=Prime.new
-ob.prime()
+#ob.prime()
+ob.hashexample()

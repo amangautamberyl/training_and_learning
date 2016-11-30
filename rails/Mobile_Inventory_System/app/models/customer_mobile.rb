@@ -1,0 +1,2 @@
+class CustomerMobile < ApplicationRecord
+end

@@ -9,6 +9,9 @@ module Hash_def
   HASH8 = Hash[1 => "Aman", 2 => "Ravi"]
   HASH9 = Hash[]
   HASH10 = Hash[]
+  def Hash_def.hashcheck
+  	puts " example"
+  end
 end
 
 class Hashing
@@ -16,7 +19,8 @@ class Hashing
 
   
   def basic
-    puts "#{HASH1["Name"]}"	
+    puts "#{Hashing::HASH1["Name"]}"
+    Hashing.hashcheck	
   end
   
 
@@ -65,7 +69,11 @@ class Hashing
  
   def hashdefault			#show default if key not present 						
     puts "The value in hash8 are: #{HASH8}"
-    puts "Default value of hash8 is : #{HASH8.default()}"  
+    puts "Default value of hash8 is : #{HASH8.default="Details"}"
+    puts "Seting default value: #{HASH8.default(key=1)}"
+    puts "Default value of hash9 is : #{HASH9.default= 'Aman'}"
+    puts "Seting default HASH8 value: #{HASH8.default(key=4)}" 
+    puts "Default value of hash9 is : #{HASH9.default()}"
     puts "#{HASH8[1]} and #{HASH8[2]}"
     puts "#{HASH8[3]}"
   end   
@@ -147,7 +155,7 @@ ob = Hashing.new
 #ob.hashkey
 #ob.hashclear
 #ob.hashsetdefaultvalue
-#ob.hashdefault
+ob.hashdefault
 #ob.hashdelete
 #ob.hasheach
 #ob.hashempty
@@ -163,4 +171,4 @@ ob = Hashing.new
 #ob.hashstore
 #ob.hashtoarray
 #ob.hashtostring
-ob.hashvalues
+#ob.hashvalues
