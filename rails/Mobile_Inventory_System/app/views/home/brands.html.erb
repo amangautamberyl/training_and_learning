@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <style>
+    table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+    </style>
+  </head>
+   <body bgcolor= "#DEB887">
+  <center><h1>BRAND DETAILS</h1></center><p align="right"><%= link_to "Home", "/" %></p>
+    <table>
+ 	  <tr>
+	    <th>BRAND-ID</th>
+	    <th>BRAND-NAME</th>
+	    <th>HEAD-LOCATION</th><br>
+	  </tr>
+      <% @brands.each do|i| %> 
+	    <tr>
+	  	  <td><%= i.id %></td>
+	      <td><%= i.name %></td>
+	      <td><%= i.head_office %></td><br>
+  	    </tr>  	
+      <% end %>
+    </table>
+  </body>
+</html>

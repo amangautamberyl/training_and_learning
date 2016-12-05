@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <style>
+    table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+    </style>
+  </head>
+  <body bgcolor= "#DEB887">
+  <center><h1>BUYER/CUSTOMER DETAILS</h1></center> <p align="right"><%= link_to "Home", "/" %></p>
+
+    <table>
+ 	  <tr>
+	    <th>BUYER-ID</th>
+	    <th>BUYER-NAME</th>
+	    <th>BUYER-ADDRESS</th>
+	    <th>BUYER-CONTACT</th><br>
+	  </tr>
+      <% @buyers.each do|i| %> 
+	    <tr>
+	  	  <td><%= i.id %></td>
+	      <td><%= i.name %></td>
+	      <td><%= i.address %></td>
+	      <td><%= i.contact_num %></td><br>
+  	    </tr>  	
+      <% end %>
+    </table>
+  </body>
+</html>

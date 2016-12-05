@@ -1,3 +1,3 @@
 class Seller < ApplicationRecord
-	# has_many :customer_mobiles
+	has_many :mobiles, through: :customer_mobiles
 end

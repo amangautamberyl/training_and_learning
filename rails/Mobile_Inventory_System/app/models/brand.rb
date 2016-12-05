@@ -1,3 +1,3 @@
 class Brand < ApplicationRecord
-	# has_many :mobiles
+  has_many :mobiles
 end

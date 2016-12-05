@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <style>
+    table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+    </style>
+  </head>
+   <body bgcolor= "#DEB887">
+  <center><h1>MOBILE DETAILS</h1></center><p align="right"><%= link_to "Home", "/" %></p>
+    <table>
+ 	  <tr>
+	    <th>MOBILE-ID</th>
+	    <th>MOBILE-NAME</th>
+	    <th>MANUFACTURING_DATE</th>
+	    <th>PRICE</th>
+	    <th>IMEI</th>
+	    <th>INVENTORY-CODE</th>
+	    <th>BRAND-ID</th>
+	    <br>
+	  </tr>
+      <% @mobiles.each do|i| %> 
+	    <tr>
+	  	  <td><%= i.id %></td>
+	      <td><%= i.name %></td>
+	      <td><%= i.manufacturing_date %></td>
+	      <td><%= i.price %></td>
+	      <td><%= i.imei_code %></td>
+	      <td><%= i.inventory%></td>
+	      <td><%= i.brand.name%></td>
+	      <br>
+  	    </tr>  	
+      <% end %>
+    </table>
+  </body>
+</html>

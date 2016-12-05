@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <style>
+    table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+    </style>
+  </head>
+   <body bgcolor= "#DEB887">
+  <center><h1>PAYMENT DETAILS</h1></center><p align="right"><%= link_to "Home", "/" %></p>
+    <table>
+ 	  <tr>
+	    <th>PAYMENT-ID</th>
+	    <th>PAYMENT-MODE</th>
+	    <th>PAYMENT-DETAILS</th>
+	    <th>PRICE</th>
+	    <br>
+	  </tr>
+      <% @payments.each do|i| %> 
+	    <tr>
+	  	  <td><%= i.id %></td>
+	      <td><%= i.payment_mode %></td>
+	      <td><%= i.payment_details %></td>
+	      <td><%= i.price %></td><br>
+  	    </tr>  	
+      <% end %>
+    </table>
+  </body>
+</html>
