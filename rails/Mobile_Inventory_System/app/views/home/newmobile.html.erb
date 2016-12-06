@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>
+	  Online Mobile Shopping
+    </title>
+     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js">
+    </script>
+    <script>  
+    $(function() 
+    {
+        $( "#calendar" ).datepicker();  
+    });
+</script>
+  </head>
+	<body background="/home/beryl/Desktop/training_and_learning/project/19-nov/background_3.jpg">
+      <form action = "/create_mobile" method = "POST">
+	  <label>MOBILE-ID:		</label>
+		<input  type ="text" placeholder="Your mobile id is:" disabled> <br><br>					
+		  <label>MOBILE-NAME:			</label><input type = "text" name="name"><br><br>
+		  <label>MANUFACTURING_DATE:		</label><input name="manufacturing_date"><br><br>
+		  <label>PRICE:			</label><input type = "text" name="price"><br><br>
+		  <label>IMEI:		</label><input type = "text" name="imei_code"><br><br>
+		  <label>INVENTORY-CODE:		</label><input type = "text" name="inventory"><br><br>
+		  <label>BRAND-ID:		</label><input type = "text" name="brand_id"><br><br><br>
+		  <input class ="back" type = "submit" value ="Back"></input>
+		  <input type = "submit" value ="Add Mobile"></input>
+	  </form>
+  </body>
+</html>

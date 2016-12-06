@@ -17,7 +17,7 @@ th, td {
     </style>
   </head>
   <body bgcolor= "#DEB887">
-  <center><h1>SELLER DETAILS</h1></center><p align="right"><%= link_to "Home", "/" %></p>
+  <center><h1>SELLER DETAILS</h1></center><p align="right"><font size=3><%= link_to "Home", "/" %>  ||  <%= link_to "Add New Seller", "/newseller" %></font></p>
     <table>
  	  <tr>
 	    <th>SELLER-ID</th>
@@ -26,7 +26,8 @@ th, td {
       <% @sellers.each do|i| %> 
 	    <tr>
 	  	  <td><%= i.id %></td>
-	      <td><%= i.name %></td><br>
+	      <td><%= i.name %></td>
+	      <td><%= link_to "Edit", "/"%> &nbsp; &nbsp; <%= link_to "Delete", "/"%><br>
   	    </tr>  	
       <% end %>
     </table>
