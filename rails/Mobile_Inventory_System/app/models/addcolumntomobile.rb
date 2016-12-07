@@ -1,2 +1,0 @@
-class Addcolumntomobile < ApplicationRecord
-end

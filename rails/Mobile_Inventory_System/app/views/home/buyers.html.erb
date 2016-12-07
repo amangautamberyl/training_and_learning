@@ -26,12 +26,13 @@ th, td {
 	    <th>BUYER-ADDRESS</th>
 	    <th>BUYER-CONTACT</th><br>
 	  </tr>
-      <% @buyers.each do|i| %> 
+      <% @buyers.each do|buyer| %> 
 	    <tr>
-	  	  <td><%= i.id %></td>
-	      <td><%= i.name %></td>
-	      <td><%= i.address %></td>
-	      <td><%= i.contact_num %></td><br>
+	  	  <td><%= buyer.id %></td>
+	      <td><%= buyer.name %></td>
+	      <td><%= buyer.address %></td>
+	      <td><%= buyer.contact_num %></td>
+        <td><%= link_to "Edit", "/"%> &nbsp; &nbsp; <%= link_to "Delete", "/delete_buyer?id=#{buyer.id}", method: 'DELETE' %></td><br>
   	    </tr>  	
       <% end %>
     </table>

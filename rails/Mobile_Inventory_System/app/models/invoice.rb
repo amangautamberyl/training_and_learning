@@ -1,3 +1,3 @@
 class Invoice < ApplicationRecord
-	# has_one	:customer_mobile
+	has_one	:customer_mobile
 end

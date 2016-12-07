@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <style>
+    table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+    </style>
+  </head>
+   <body bgcolor= "#DEB887">
+  <center><h1>MOBILE DETAILS</h1></center><p align="right"><font size=3><%= link_to "Home", "/" %>   ||  <%= link_to "Update Mobiles", "/customer_mobiledetails" %></font></p>
+    <table>
+ 	  <tr>
+ 	    <th>ID</th>
+	    <th>MOBILE-Name</th> 
+	    <th>SELLER-Name</th>
+	    <th>BUYER-Name</th>
+	    <th>PAYMENT-ID</th>
+	    <br>
+	  </tr>
+      <% @customer_mobiles.each do|customer_mobile| %> 
+	    <tr>
+	      <td><%= customer_mobile.id%></td>
+	  	  <td><%= customer_mobile.mobile.name%></td>
+	      <td><%= customer_mobile.seller.name%></td>
+	      <td><%= customer_mobile.buyer.name%></td>
+	      <td><%= customer_mobile.payment_id%></td>
+	      <td><%= link_to "Edit", "/" %>  <%= link_to "Delete", "/delete_customer_mobile?id=#{customer_mobile.id}", method: 'DELETE' %></td>
+	      <br>
+  	    </tr>  	
+      <% end %>
+    </table>
+  </body>
+</html>

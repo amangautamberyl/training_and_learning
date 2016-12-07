@@ -1,8 +1,9 @@
 class HomeController < ApplicationController
-
+  
 #Read Tables  (READ OPERATION)
 	def mobiles
 		@mobiles = Mobile.all.order(:id)
+
 	end
 
 	def brands
@@ -19,6 +20,10 @@ class HomeController < ApplicationController
 	
 	def invoices
  		@invoices =Invoice.all
+	end
+
+	def customer_mobiles
+ 		@customer_mobiles = CustomerMobile.all
 	end
 
 # Insert Data into Tables  (CREATE OPERATION)
@@ -48,9 +53,29 @@ class HomeController < ApplicationController
 		redirect_to '/invoices'
 	end
 
+	def create_customer_mobile
+		CustomerMobile.create(mobile_id: params[:mobile_id], seller_id:  params[:seller_id], buyer_id: params[:buyer_id], payment_id:  params[:payment_id] )
+		redirect_to '/customer_mobiles'
+	end
+
 # Delete Data from Table (DELETE OPERATION)
 	def delete_mobile
 		Mobile.find(params[:id]).destroy
 		redirect_to '/mobiles'
+	end
+
+	def delete_seller
+		Seller.find(params[:id]).destroy
+		redirect_to '/sellers'
+	end
+
+	def delete_customer_mobile
+		CustomerMobile.find(params[:id]).destroy
+		redirect_to '/customer_mobiles'
+	end
+
+	def delete_buyer
+		Buyer.find(params[:id]).destroy
+		redirect_to '/buyers'
 	end
 end
