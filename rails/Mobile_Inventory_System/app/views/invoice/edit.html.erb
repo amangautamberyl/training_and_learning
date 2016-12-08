@@ -1,0 +1,7 @@
+<%= form_for @invoice, url: "/edit_invoice", method: :put do |invoice| %>
+<%= invoice.hidden_field :id%>
+ <label>PAYMENT-MODE:			</label><%= invoice.text_field :payment_mode %><br />
+  <label>PAYMENT-DETAILS:			</label><%= invoice.text_field :payment_details %><br>
+  <label>PRICE:		</label><%= invoice.text_field :price %><br><br>
+  <%= invoice.submit "Update" %>
+<% end %>

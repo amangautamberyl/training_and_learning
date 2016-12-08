@@ -1,8 +1,9 @@
 
 <%= form_for @mobile, url: "/edit_mobile", method: :put do |mobile| %>
+<%= mobile.hidden_field :id%>
   <label>MOBILE-NAME:			</label><%= mobile.text_field :name %><br />
    <label>MANUFACTURING_DATE:		</label><%= mobile.text_field :manufacturing_date %><br><br>
      <%= mobile.collection_select :brand_id, @brands, :id, :name %>
   <%#= mobile.text_area :body, size: "60x12" %>
-  <%= mobile.submit "Create" %>
+  <%= mobile.submit "Update" %>
 <% end %>

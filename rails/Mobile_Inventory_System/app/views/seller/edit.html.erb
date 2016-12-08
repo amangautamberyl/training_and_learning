@@ -1,0 +1,5 @@
+<%= form_for @seller, url: "/edit_seller", method: :put do |seller| %>
+<%= seller.hidden_field :id%>
+  <label>SELLER-NAME:			</label><%= seller.text_field :name %><br />
+  <%= seller.submit "Update" %>
+<% end %>

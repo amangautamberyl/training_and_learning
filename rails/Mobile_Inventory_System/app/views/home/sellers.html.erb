@@ -27,7 +27,7 @@ th, td {
 	    <tr>
 	  	  <td><%= seller.id %></td>
 	      <td><%= seller.name %></td>
-	      <td><%= link_to "Edit", "/"%> &nbsp; &nbsp; <%= link_to "Delete", "/delete_seller?id=#{seller.id}", method: 'DELETE' %></td><br>
+	      <td><%= link_to "Edit", "/edit_seller?id=#{seller.id}" %> &nbsp; &nbsp; <%= link_to "Delete", "/delete_seller?id=#{seller.id}", method: 'DELETE' %></td><br>
   	    </tr>  	
       <% end %>
     </table>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @borrower.book %>
+</p>
+
+<p>
+  <strong>Issued date:</strong>
+  <%= @borrower.issued_date %>
+</p>
+
+<p>
+  <strong>Return date:</strong>
+  <%= @borrower.return_date %>
+</p>
+
+<p>
+  <strong>Staff:</strong>
+  <%= @borrower.staff %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @borrower.student %>
+</p>
+
+<%= link_to 'Edit', edit_borrower_path(@borrower) %> |
+<%= link_to 'Back', borrowers_path %>

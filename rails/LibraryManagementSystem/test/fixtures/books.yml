@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  language: MyString
+  publication: one
+  actual_copy: 1
+  current_copy: 1
+  dept: one
+
+two:
+  title: MyString
+  language: MyString
+  publication: two
+  actual_copy: 1
+  current_copy: 1
+  dept: two

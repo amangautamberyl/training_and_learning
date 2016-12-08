@@ -29,7 +29,7 @@ th, td {
 	  	  <td><%= brand.id %></td>
 	      <td><%= brand.name %></td>
 	      <td><%= brand.head_office %></td>
-        <td><%= link_to "Edit", "/"%> &nbsp; &nbsp; <%= link_to "Delete", "/delete_buyer?id=#{brand.id}", method: 'DELETE' %></td><br>
+        <td><%= link_to "Edit", "/edit_brand?id=#{brand.id}"%>  <%= link_to "Delete", "/delete_brand?id=#{brand.id}", method: 'DELETE' %></td>
 
   	    </tr>  	
       <% end %>

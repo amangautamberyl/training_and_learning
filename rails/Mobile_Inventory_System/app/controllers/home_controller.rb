@@ -59,10 +59,7 @@ class HomeController < ApplicationController
 	end
 
 # Delete Data from Table (DELETE OPERATION)
-	def delete_mobile
-		Mobile.find(params[:id]).destroy
-		redirect_to '/mobiles'
-	end
+	
 
 	def delete_seller
 		Seller.find(params[:id]).destroy

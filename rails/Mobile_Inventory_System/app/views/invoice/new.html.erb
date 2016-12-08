@@ -1,0 +1,6 @@
+<%= form_for @invoice, url: "/create_new_invoice" do |invoice| %>
+  <label>PAYMENT-MODE:			</label><%= invoice.text_field :payment_mode %><br />
+  <label>PAYMENT-DETAILS:			</label><%= invoice.text_field :payment_details %><br>
+  <label>PRICE:		</label><%= invoice.text_field :price %><br><br>
+  <%= invoice.submit "Create" %>
+<% end %>

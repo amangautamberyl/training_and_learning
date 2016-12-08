@@ -1,0 +1,7 @@
+<%= form_for @buyer, url: "/edit_buyer", method: :put do |buyer| %>
+<%= buyer.hidden_field :id%>
+  <label>BUYER NAME:			</label><%= buyer.text_field :name %><br />
+  <label>BUYER-ADDRESS:			</label><%= buyer.text_field :address %><br>
+  <label>BUYER-CONTACT:		</label><%= buyer.text_field :contact_num %><br><br>
+  <%= buyer.submit "Update" %>
+<% end %>

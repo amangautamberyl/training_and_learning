@@ -10,11 +10,13 @@ Rails.application.routes.draw do
  get '/mobile/new', to: 'mobile#new'
  get '/brand/new', to: 'brand#new'
  get '/seller/new', to: 'seller#new'
+ get '/buyer/new', to: 'buyer#new'
+ get '/invoice/new', to: 'invoice#new'
  get '/customer_mobiles', to: 'home#customer_mobiles'
 
  get '/newmobile', to: 'home#newmobile'
  get '/newbrand', to: 'home#newbrand'
- get '/newbuyer', to: 'home#newbuyer'
+ # get '/newbuyer', to: 'home#newbuyer'
  get '/newseller', to: 'home#newseller'
  get '/newinvoice', to: 'home#newinvoice'
  # get '/mobile/edit', to: 'mobile#edit'
@@ -30,11 +32,28 @@ Rails.application.routes.draw do
  post '/create_new_mobile', to: 'mobile#create'
  post '/create_seller', to: 'seller#create'
  post '/create_new_brand', to: 'brand#create'
-
- delete '/delete_mobile', to: 'home#delete_mobile'
- delete '/delete_customer_mobile', to: 'home#delete_customer_mobile'
- delete '/delete_seller', to: 'home#delete_seller'
- delete '/delete_buyer', to: 'home#delete_er'
+ post '/create_new_seller', to: 'seller#create'
+ post '/create_new_buyer', to: 'buyer#create'
+ post '/create_new_invoice', to: 'invoice#create'
 
  get '/edit_mobile',to:'mobile#edit'
+ get '/edit_brand',to:'brand#edit'
+ get '/edit_seller',to:'seller#edit'
+ get '/edit_buyer',to:'buyer#edit'
+ get '/edit_invoice',to:'invoice#edit' 
+
+ put '/edit_mobile',to:'mobile#update' 
+ put '/edit_brand',to:'brand#update' 
+ put '/edit_seller',to:'seller#update' 
+ put '/edit_buyer',to:'buyer#update' 
+ put '/edit_invoice',to:'invoice#update' 
+
+
+ delete '/delete_mobile', to: 'mobile#delete_mobilezxs'
+ delete '/delete_brand', to: 'brand#delete_brand'
+ delete '/delete_seller', to: 'seller#delete_seller'
+ delete '/delete_buyer', to: 'buyer#delete_buyer'
+ delete '/delete_invoice', to: 'invoice#delete_invoice'
+
+
 end

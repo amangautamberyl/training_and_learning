@@ -39,7 +39,6 @@ th, td {
 	      <td><%= i.inventory%></td>
 	      <td><%= i.brand.name%></td>
 	      <td><%= link_to "Edit", "/edit_mobile?id=#{i.id}"%>  <%= link_to "Delete", "/delete_mobile?id=#{i.id}", method: 'DELETE' %></td>
-
 	      <br>
   	    </tr>  	
       <% end %>

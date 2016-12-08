@@ -1,0 +1,9 @@
+
+<%= form_for @brand, url: "/edit_brand", method: :put do |brand| %>
+<%= brand.hidden_field :id%>
+  <label>BRAND NAME:			</label><%= brand.text_field :name %><br />
+  
+     <%#= mobile.collection_select :brand_id, @brands, :id, :name %>
+  <%#= mobile.text_area :body, size: "60x12" %>
+  <%= brand.submit "Update" %>
+<% end %>

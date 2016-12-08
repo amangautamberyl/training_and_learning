@@ -19,11 +19,21 @@ class MobileController < ApplicationController
 	end
 
 	def edit
-      @mobile = Mobile.find(params[:id])
-      @brands = Brand.all
+        @mobile = Mobile.find(params[:id])
+        @brands = Brand.all
 	end
 
 	def update
-
+        @mobile = Mobile.find(params[:buyer][:id])
+        @buyer.name = params[:buyer][:name]
+        @buyer.address = params[:buyer][:address]
+        @buyer.contact_num = params[:buyer][:contact_num]
+        @buyer.save
+        redirect_to '/buyers'
 	end
+
+      def delete_mobile
+            Mobile.find(params[:id]).destroy
+            redirect_to '/mobiles'
+      end
 end
