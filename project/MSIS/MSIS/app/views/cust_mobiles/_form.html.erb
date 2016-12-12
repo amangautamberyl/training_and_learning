@@ -1,0 +1,37 @@
+<%= form_for(cust_mobile) do |f| %>
+  <% if cust_mobile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cust_mobile.errors.count, "error") %> prohibited this cust_mobile from being saved:</h2>
+
+      <ul>
+      <% cust_mobile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :mses_id %>
+    <%= f.text_field :mses_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :seller_id %>
+    <%= f.text_field :seller_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :buyer_id %>
+    <%= f.text_field :buyer_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :invoice_id %>
+    <%= f.text_field :invoice_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

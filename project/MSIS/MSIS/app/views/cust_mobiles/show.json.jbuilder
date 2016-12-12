@@ -1,0 +1,1 @@
+json.partial! "cust_mobiles/cust_mobile", cust_mobile: @cust_mobile

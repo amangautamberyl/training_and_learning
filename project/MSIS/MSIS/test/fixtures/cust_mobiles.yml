@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mses: one
+  seller: one
+  buyer: one
+  invoice: one
+
+two:
+  mses: two
+  seller: two
+  buyer: two
+  invoice: two

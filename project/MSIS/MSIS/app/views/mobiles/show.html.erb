@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mobile.Name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @mobile.Price %>
+</p>
+
+<p>
+  <strong>Manufacturing date:</strong>
+  <%= @mobile.manufacturing_date %>
+</p>
+
+<p>
+  <strong>Imei code:</strong>
+  <%= @mobile.Imei_code %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @mobile.brand %>
+</p>
+
+<%= link_to 'Edit', edit_mobile_path(@mobile) %> |
+<%= link_to 'Back', mobiles_path %>

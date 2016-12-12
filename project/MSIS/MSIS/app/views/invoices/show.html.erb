@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Payment mode:</strong>
+  <%= @invoice.payment_mode %>
+</p>
+
+<p>
+  <strong>Payment details:</strong>
+  <%= @invoice.payment_details %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @invoice.price %>
+</p>
+
+<p>
+  <strong>Selling date:</strong>
+  <%= @invoice.selling_date %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>

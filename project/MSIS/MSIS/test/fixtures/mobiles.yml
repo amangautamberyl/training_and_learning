@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name: MyString
+  Price: 1
+  manufacturing_date: 2016-12-12 10:42:33
+  Imei_code: 1
+  Inventory: 1
+  brand: one
+
+two:
+  Name: MyString
+  Price: 1
+  manufacturing_date: 2016-12-12 10:42:33
+  Imei_code: 1
+  Inventory: 1
+  brand: two

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cust Mobiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mses</th>
+      <th>Seller</th>
+      <th>Buyer</th>
+      <th>Invoice</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cust_mobiles.each do |cust_mobile| %>
+      <tr>
+        <td><%= cust_mobile.mobile %></td>
+        <td><%= cust_mobile.seller %></td>
+        <td><%= cust_mobile.buyer %></td>
+        <td><%= cust_mobile.invoice %></td>
+        <td><%= link_to 'Show', cust_mobile %></td>
+        <td><%= link_to 'Edit', edit_cust_mobile_path(cust_mobile) %></td>
+        <td><%= link_to 'Destroy', cust_mobile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cust Mobile', new_cust_mobile_path %>

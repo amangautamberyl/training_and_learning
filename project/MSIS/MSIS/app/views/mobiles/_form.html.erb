@@ -1,0 +1,42 @@
+<%= form_for(mobile) do |f| %>
+  <% if mobile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mobile.errors.count, "error") %> prohibited this mobile from being saved:</h2>
+
+      <ul>
+      <% mobile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name %>
+    <%= f.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Price %>
+    <%= f.number_field :Price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :manufacturing_date %>
+    <%= f.datetime_select :manufacturing_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Imei_code %>
+    <%= f.number_field :Imei_code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :brand_id %>
+    <%= f.collection_select :brand_id, @brands, :id, :Name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

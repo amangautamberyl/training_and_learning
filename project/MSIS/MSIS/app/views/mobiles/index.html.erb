@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mobiles</h1><p align="right"><%= link_to 'Home', root_path %></p>
+<hr/>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Manufacturing date</th>
+      <th>Imei code</th>
+      <th>Brand</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mobiles.each do |mobile| %>
+      <tr>
+        <td><%= mobile.Name %></td>
+        <td><%= mobile.Price %></td>
+        <td><%= mobile.manufacturing_date %></td>
+        <td><%= mobile.Imei_code %></td>
+        <td><%= mobile.brand.Name %></td>
+        <td><%= link_to 'Show', mobile %></td>
+        <td><%= link_to 'Edit', edit_mobile_path(mobile) %></td>
+        <td><%= link_to 'Destroy', mobile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mobile', new_mobile_path %>
