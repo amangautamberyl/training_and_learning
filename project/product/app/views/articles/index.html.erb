@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
-
 <center>
-<h1>Articles</h1>
+<!-- <h1>Articles</h1> -->
 <p align = "right"><%= link_to 'New Article', new_article_path %></p>
 <table>
   <tbody>
@@ -16,7 +15,7 @@
           <dd><%= truncate(strip_tags(article.description), length: 80) %></dd>
         </dl>
         </td>
-        <td><span style='font-family:Arial;'>&#8377;</span><%= article.price %></td>
+        <td><span style='font-family:Arial;'>&#8377;<%= article.price %></span></td>
         <td class="list_actions">
           <%= link_to 'Show', article %>
           <%= link_to 'Edit', edit_article_path(article) %>

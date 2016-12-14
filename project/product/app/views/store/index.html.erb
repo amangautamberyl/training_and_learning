@@ -1,2 +1,21 @@
-<h1>Store#index</h1>
-<p>Find me in app/views/store/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+<h1>Articles</h1>
+
+<% @articles.each do |article| %>
+  <div class="entry">
+
+    <%= image_tag(article.image_url) %>
+    <h3><%= article.title %></h3>
+    
+    <div class="desc">
+      <%= article.description %>
+    </div>
+
+    <div class="price_line">
+      <span class="price"><%= number_to_currency(article.price) %></span>
+       <%= button_to 'Add to Cart', lineitems_path(article_id: article) %>
+    </div>
+
+  </div>
+<% end %>
+You have entered this page: <%= pluralize(@count.to_i, "times") %>

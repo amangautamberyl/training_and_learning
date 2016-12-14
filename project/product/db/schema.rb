@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161213065721) do
+ActiveRecord::Schema.define(version: 20161214092203) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -21,4 +24,26 @@ ActiveRecord::Schema.define(version: 20161213065721) do
     t.datetime "updated_at",                          null: false
   end
 
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "lineitems", force: :cascade do |t|
+    t.integer  "article_id"
+    t.integer  "cart_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "quantity",   default: 1
+    t.index ["article_id"], name: "index_lineitems_on_article_id", using: :btree
+    t.index ["cart_id"], name: "index_lineitems_on_cart_id", using: :btree
+  end
+
+  create_table "practs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "lineitems", "articles"
+  add_foreign_key "lineitems", "carts"
 end
