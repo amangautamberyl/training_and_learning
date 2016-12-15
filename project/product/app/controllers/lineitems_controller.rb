@@ -64,7 +64,8 @@ end
     @lineitem = Lineitem.find(params[:id])
     @lineitem.destroy
     respond_to do |format|
-      format.html { redirect_to cart_path(Cart.find(params[:id])), notice: 'Lineitem was successfully destroyed.' }
+      # format.html { redirect_to "http://localhost:3000/carts/31", notice: 'Lineitem was successfully destroyed.' }
+      format.html { redirect_to store_index_url, notice: 'Lineitem was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
