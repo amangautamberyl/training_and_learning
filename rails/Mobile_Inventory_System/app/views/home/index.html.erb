@@ -3,15 +3,18 @@
     <title>
       Mobile Inventory
     </title>
+   
   </head>
   <body>
-
     <h1>MOBILE INVENTORY SYSTEM</h1>
     <br>
     <hr>
       <%= link_to "View all Mobiles", controller: 'home', action: 'mobiles' %>  ||  <%= link_to "View all Brands", controller: 'home', action: 'brands' %>  ||  <%= link_to "View all Buyers", controller: 'home', action: 'buyers' %>  ||  <%= link_to "View all Sellers", controller: 'home', action: 'sellers' %>  ||  <%= link_to "View all Payments", controller: 'home', action: 'invoices' %>  ||  <%= link_to "View all", controller: 'home', action: 'customer_mobiles' %>
      <br>
     <hr>
+    
+      <%= gmaps4rails(@json) %>
+    
 
   </body>
 </html>

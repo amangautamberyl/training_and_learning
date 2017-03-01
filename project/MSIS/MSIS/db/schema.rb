@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161212084205) do
+ActiveRecord::Schema.define(version: 20170116053354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20161212084205) do
     t.string   "contact_num"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "image"
   end
 
   create_table "cust_mobiles", force: :cascade do |t|
@@ -41,6 +42,19 @@ ActiveRecord::Schema.define(version: 20161212084205) do
     t.index ["invoice_id"], name: "index_cust_mobiles_on_invoice_id", using: :btree
     t.index ["mses_id"], name: "index_cust_mobiles_on_mses_id", using: :btree
     t.index ["seller_id"], name: "index_cust_mobiles_on_seller_id", using: :btree
+  end
+
+  create_table "image_attachments", force: :cascade do |t|
+    t.integer  "post_id"
+    t.string   "avatar"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "invoices", force: :cascade do |t|
@@ -71,6 +85,19 @@ ActiveRecord::Schema.define(version: 20161212084205) do
     t.integer  "Inventory"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+  end
+
+  create_table "post_attachments", force: :cascade do |t|
+    t.integer  "post_id"
+    t.string   "avatar"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sellers", force: :cascade do |t|

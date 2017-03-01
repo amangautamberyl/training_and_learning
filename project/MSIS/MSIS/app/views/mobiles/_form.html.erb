@@ -10,6 +10,10 @@
       </ul>
     </div>
   <% end %>
+  
+  <%= form_for @mobile do |f| %>
+  <%= f.file_field :picture %>
+<% end %>
 
   <div class="field">
     <%= f.label :Name %>

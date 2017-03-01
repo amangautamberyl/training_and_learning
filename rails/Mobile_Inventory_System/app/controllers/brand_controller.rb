@@ -2,6 +2,7 @@ class BrandController < ApplicationController
 
 	def new 
 		@brands = Brand.new
+
 	end
 
 	def create
@@ -25,4 +26,5 @@ class BrandController < ApplicationController
         Brand.find(params[:id]).destroy
         redirect_to '/brands'
     end
+
 end

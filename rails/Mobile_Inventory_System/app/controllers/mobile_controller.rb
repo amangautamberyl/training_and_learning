@@ -32,8 +32,8 @@ class MobileController < ApplicationController
         redirect_to '/buyers'
 	end
 
-      def delete_mobile
-            Mobile.find(params[:id]).destroy
-            redirect_to '/mobiles'
-      end
+  def delete_mobile
+    Mobile.find(params[:id]).destroy
+    redirect_to '/mobiles'
+  end
 end

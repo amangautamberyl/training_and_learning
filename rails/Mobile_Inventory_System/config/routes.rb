@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root  to: 'home#index'
+ root  to: 'home#index'
  get '/brands', to: 'home#brands'
  get '/mobiles', to: 'home#mobiles'
  get '/buyers', to: 'home#buyers'
- get '/brands', to: 'home#brands'
+ # get '/brands', to: 'home#brands'
  get '/invoices', to: 'home#invoices'
  get '/sellers', to: 'home#sellers'
  get '/mobile/new', to: 'mobile#new'
@@ -22,6 +22,7 @@ Rails.application.routes.draw do
  # get '/mobile/edit', to: 'mobile#edit'
  get '/customer_mobiledetails', to: 'home#customer_mobiledetails'
  #get '/seller/new',to:'seller#new'
+ get '/brand/new', to: 'brand#new'
 
  post '/create_mobile', to: 'home#create_mobile'
  post '/create_brand', to: 'home#create_brand'
@@ -49,7 +50,7 @@ Rails.application.routes.draw do
  put '/edit_invoice',to:'invoice#update' 
 
 
- delete '/delete_mobile', to: 'mobile#delete_mobilezxs'
+ delete '/delete_mobile', to: 'mobile#delete_mobile'
  delete '/delete_brand', to: 'brand#delete_brand'
  delete '/delete_seller', to: 'seller#delete_seller'
  delete '/delete_buyer', to: 'buyer#delete_buyer'

@@ -1,5 +1,7 @@
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>    
     <style>
     table, td, th {    
     border: 1px solid #ddd;
@@ -34,5 +36,59 @@ th, td {
   	    </tr>  	
       <% end %>
     </table>
+    
+<%= gmaps4rails(@json) %>
+
+ <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+  <script language="JavaScript">
+    $(document).ready(function() {
+    var title = {
+       text: 'Mobiles Brands with price'   
+    };
+    var subtitle = {
+        text: 'Source: amanmobile.com'
+    };
+    var xAxis = {
+       categories: <%= raw @xaxis.as_json %>
+    };
+    var yAxis = {
+        plotLines: [{
+        value: 0,
+        width: 1,
+        color: '#808080'
+      }],
+   };   
+
+   var tooltip = {
+      valueSuffix: '.Rs'
+   }
+
+   var legend = {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'middle',
+      borderWidth: 0
+   };
+
+   var series =  [
+      {
+         name: 'Brands with Price:',
+         data: <%= raw @series.as_json %>
+      }, 
+   ];
+
+   var json = {};
+
+   json.title = title;
+   json.subtitle = subtitle;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;
+   json.tooltip = tooltip;
+   json.legend = legend;
+   json.series = series;
+
+    $('#container').highcharts(json);
+  });
+</script>
   </body>
 </html>

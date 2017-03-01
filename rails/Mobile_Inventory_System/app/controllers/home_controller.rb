@@ -1,17 +1,27 @@
 class HomeController < ApplicationController
   
 #Read Tables  (READ OPERATION)
-	def mobiles
+  	def mobiles
 		@mobiles = Mobile.all.order(:id)
-
 	end
+
 
 	def brands
  		@brands =Brand.all
+ 		@xaxis = ['Apple', 'Samsung', 'LG', 'Oppo', 'Acer']
+ 		# @xaxis = Brand.find_by[params[:name]]
+ 		# @xaxis = Brand.find_by_sql("Select name from brands")
+ 		@series = [30000, 40000, 30000, 40000, 30000]
+  	    @json = @brands.to_gmaps4rails
+  	    debugger
+  	      respond_to do |format|
+          format.html 
+          format.json { render :json => @brands }
+     end
 	end
 
 	def buyers
- 		@buyers =Buyer.all
+ 		@buyers = Buyer.all
 	end
 	
 	def sellers
@@ -39,7 +49,8 @@ class HomeController < ApplicationController
 	end
 
 	def create_buyer
-		Buyer.create(name: params[:name], address: params[:address], contact_num: params[:contact_num])
+		# Buyer.create(name: params[:name], address: params[:address], contact_num: params[:contact_num])
+		Mobilecreation.new({name: params[:name], address: params[:address], contact_num: params[:contact_num][]}).create_buyer
 		redirect_to '/buyers'
 	end
 
